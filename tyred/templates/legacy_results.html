@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Workout Results</title>
+    <meta charset="UTF-8">
+    <link href="{{url_for('static', filename='style.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container" class="form-group">
+        <div class="page-header">
+            <h2>Legacy workout results as of {{datetime_today}}</h2>
+        </div>
+        <br>
+        <br>
+        <p> {{table | safe}} </p>
+        <br>
+        <br>
+        <p>Click <a href="/">here</a> to go home</p>
+        <p>Click <a href="/to_plot">here</a> to see graph of results</p>
+        <p>Click <a href="/to_csv">here</a> to export results to excel</p>
+        <p>Click <a href="/sample">here</a> to load a sample tracker</p>
+        <p>Click <a href="/db_reset">here</a> to reset the database (WARNING: This action cannot be reversed)</p>
+        <p>{{ datetime_now }}</p>
+        <br>
+        <br>
+    </div>
+</body>
+
+</html>
